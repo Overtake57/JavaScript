@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css.map" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice numéro 8 - 9</title>
+  </head>
+
+  <body>
+    <script>
+      var nbr_pre = [3, 5, 7, 11, 13, 17],
+        length = nbr_pre.length,
+        min = nbr_pre[length - 1] + 2,
+        max = parseInt(prompt("Nombre maximum :"));
+      for (var nbr = min; nbr < max; nbr += 2) {
+        var isPrime = true,
+          moitier = (nbr + 1) / 2;
+        for (var id in nbr_pre) {
+          if (!isPrime) {
+            break;
+          }
+          if (nbr_pre[id] < moitier) {
+            var reste_nbr = nbr % nbr_pre[id];
+            if (reste_nbr == 0) {
+              isPrime = false;
+            }
+          } else {
+            break;
+          }
+        }
+        if (isPrime) {
+          nbr_pre.push(nbr);
+        }
+      }
+      for (var id in nbr_pre) {
+        document.write(nbr_pre[id]);
+      }
+    </script>
+  </body>
+</html>

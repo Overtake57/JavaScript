@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <script language="javascript">
+      function conversion_seconde_heure(time) {
+        var leReste = time;
+        var result = "";
+        var nbJours = Math.floor(leReste / (3600 * 24)); //Nombre de jour
+        leReste -= nbJours * 24 * 3600;
+        var nbHours = Math.floor(leReste / 3600); //Nombre d'heure
+        leReste -= nbHours * 3600;
+        var nbMinutes = Math.floor(leReste / 60); //Nombre de minute
+        leReste -= nbMinutes * 60;
+        var nbSeconds = leReste;                 // Nombre de seconde qui est le reste
+        if (nbJours > 0) result = result + nbJours + "J ";
+        if (nbHours > 0) result = result + nbHours + "H ";
+        if (nbMinutes > 0) result = result + nbMinutes + "Min ";
+        if (nbSeconds > 0) result = result + nbSeconds + "S ";
+        return result;
+      }
+    </script>
+  </head>
+  <body>
+    <script language="javascript">
+      document.write(conversion_seconde_heure(100000));
+    </script>
+  </body>
+</html>

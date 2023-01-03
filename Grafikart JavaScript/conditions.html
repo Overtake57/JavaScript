@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const age= 18
+        const pays = 'FR'
+        const peutConduireFrance = pays ==='FR' && age >= 18
+        const peutConduireUS = pays ==='US' && age >= 16
+        
+        if  (peutConduireFrance) {
+            console.log ('Vous avez le droit de conduire en France ')
+
+        } else if (peutConduireUS) {
+             console.log ("Vous avez le droit de conduire au Etats-Uni ")
+            } else { 
+                    console.log("Vous n'avez pas le droit de conduire")}
+        
+        // Le switch est une syntaxe lourde il est donc moins utilisé que la conditions "if" et "else" etc..
+        // cependant il est utilisé dans des cas exceptionnelle, utilise quand on a besoin de comparé une variable a plusieur
+        
+        switch (pays) {
+            case 'FR':
+                console.log("Je suis en france")
+                break
+            case 'US':
+                console.log('Je suis aux états unis')
+                break
+            default:
+            console.log('Je suis dans un pays inconnu')
+                break
+        }
+
+        // C'est exactement la même que ça |
+        //                                 v 
+        
+        if (pays ==='FR') {
+
+         } else if (pays === 'US') {
+
+         } else {
+
+         }
+
+    </script>
+</body>
+</html>

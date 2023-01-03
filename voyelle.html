@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      function compterNbVoyelles(mot) {
+        mot = mot.toLowerCase();
+        const voyelles = ["a", "e", "i", "o", "u", "y"];
+        let nbVoyelles = 0;
+        for (let lettre of mot) {
+          if (voyelles.includes(lettre)) {
+            nbVoyelles++;
+          }
+        }
+        return nbVoyelles;
+      }
+
+    </script>
+  </body>
+</html>

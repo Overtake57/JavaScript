@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>                   <!-- CODE HTML -->
+    <h1>Calcul TTC</h1> 
+<form action="" id="form-ttc"> 
+  <input type="text" id="prix-ht"/>   <!-- SAISIE UTILISATEUR-->
+  <button type="submit">Calculer</button> <!-- BOUTON -->
+</form>
+<p id="prix-ttc"></p>
+
+                          <!-- CODE HTML  -->
+
+
+
+<script>
+    var taux = 20.0;
+var form = document.getElementById("form-ttc");     // Pour l'ID ttc HTML //
+var champPrix = document.getElementById("prix-ht"); // Pour l'ID ht HTML  //
+var resultat = document.getElementById("prix-ttc"); // Pour l'ID TTC HTML //
+
+function calculTTC(prixHT){                     
+  prixHT = prixHT.replace(",",".");
+  var prixTTC = prixHT*(1+taux/100);
+  return prixTTC;
+}
+
+form.onsubmit = function(evt){
+  evt.preventDefault();
+  var prixTTC = calculTTC(champPrix.value);
+  if(prixTTC=="" || isNaN(prixTTC)){
+      resultat.innerHTML = "Veuillez saisir un montant.";
+  }else{
+      var prixTTC2 = prixTTC.toFixed(2);
+      var prixTTC2 = prixTTC2.toString().replace(".",",");
+      resultat.innerHTML = "Prix TTC : "+prixTTC2+" €"}
+}
+
+</script>
+
+
+
+</body>
+</html>

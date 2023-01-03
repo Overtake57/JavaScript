@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css.map" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice numéro 7</title>
+  </head>
+
+  <body>
+    <script>
+      let cpt = 0;
+      let somme = 0.0;
+
+      /* Boucle de traitement */
+
+      do {
+        nblu = parseFloat(prompt("Nombre (0 pour finir) : "));
+        cpt = cpt + 1;
+        somme = somme + parseFloat(nblu);
+      } while (nblu != 0);
+
+      /* Affichage du résultat */
+      if (cpt == 1) {
+        document.write("Aucun nombre n'a été saisi");
+      } else {
+        moyenne = somme / (cpt - 1);
+        document.write("Moyenne : " + moyenne);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                            
+                            <!-- CODE HTML  -->
+  <h1>Hauteurs et Largeurs</h1>
+<h2>Largeurs: <input type ="number" id ="largeurs"></h2>
+<h2>Hauteurs: <input type ="number" id ="hauteurs"></h2>
+<button onclick="surfacePer()">Trouver le périmètre</button>
+
+<p id="output"></p>
+                            <!-- CODE HTML  -->
+    <script>
+
+      function surfacePer(){
+        let w = document.getElementById("largeurs").value;
+        let h = document.getElementById("hauteurs").value;
+        
+        let surface = w * h;
+        let perimetre= w + w + h + h;
+        
+        let result = "surface: " + surface + " périmètre: " + perimetre ;
+        
+        document.getElementById("output").innerHTML = result; 
+      }
+    
+    </script>
+</html>
